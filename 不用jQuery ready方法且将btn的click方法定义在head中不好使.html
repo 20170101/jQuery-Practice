@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script>
+			debugger
+			$('.btn1').click(function(){//这种不用ready方法的，你把btn1的click定义放在了head中是不好使的，
+										//因为在head中时body中的文档还没解析，因此你用debugger在head中打断点
+										//看$('.btn1')其实是空的，虽说不报错，但不好使。
+				$('p').slideToggle();
+			})
+		</script>
+	</head>
+	<body>
+		<p>This is a paragrapth.</p>
+		<button class="btn1">Toggle</button>
+	</body>	
+</html>

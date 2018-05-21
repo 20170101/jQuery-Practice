@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	</head>
+	<body>
+		<p>This is a paragrapth.</p>
+		<button class="btn1">Toggle</button>
+		<script>
+			debugger
+			$('.btn1').click(function(){//放在body最下边就可以不用在ready里定义btn的click了，另外你看《JavaScript高级程序设计》中也推荐把script标签放
+			//body最下边。
+				$('p').slideToggle();
+			})
+		</script>
+	</body>	
+</html>
